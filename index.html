@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPM Hálótervezés</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 560px;
+            height: 793px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hálótervezés - MPM</h1>
+        <h2>Általános információk</h2>
+        <p><strong>Intézmény:</strong> Debreceni SZC Mechwart András Gépipari és Informatikai Technikum</p>
+        
+        <h2>Az MPM (Metra Potential Method) Háló</h2>
+        <p>Az MPM háló tevékenység-csomópontú, ahol a csomópontokhoz rendelt tevékenységek és az éleken jelölt kapcsolatok a legfontosabb elemek.</p>
+        <p>A kapcsolatok irányított élek formájában jelennek meg.</p>
+
+        <h3>Kapcsolatok típusai</h3>
+        <ul>
+            <li><strong>Vége - Kezdet kapcsolat (VK(t)):</strong> Az előző tevékenység végéhez képest később induló feladat.</li>
+            <li><strong>Kezdet - Kezdet kapcsolat (KK(t)):</strong> Az előző tevékenység kezdési időpontjához viszonyított indulás.</li>
+            <li><strong>Vége - Vége kapcsolat (VV(t)):</strong> A két tevékenység befejezése között minimális idő eltelte.</li>
+        </ul>
+        
+        <h3>MPM Háló készítése - Tevékenységtáblázat</h3>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Tev.</th><th>Idő</th><th>Legkorábbi kezdet</th><th>Legkésőbbi kezdet</th>
+            </tr>
+            <tr><td>Start</td><td>-</td><td>0</td><td>0</td></tr>
+            <tr><td>A</td><td>2</td><td>0</td><td>2</td></tr>
+            <tr><td>B</td><td>4</td><td>0</td><td>0</td></tr>
+            <tr><td>C</td><td>4</td><td>2</td><td>5</td></tr>
+            <tr><td>D</td><td>5</td><td>4</td><td>4</td></tr>
+            <tr><td>E</td><td>6</td><td>9</td><td>9</td></tr>
+            <tr><td>Vége</td><td>-</td><td>15</td><td>15</td></tr>
+        </table>
+
+        <p><strong>Készült:</strong> Debrecen, 2025. március. 1.</p>
+    </div>
+</body>
+</html>
